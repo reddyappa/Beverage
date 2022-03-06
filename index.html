@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -148,4 +149,163 @@ $.getJSON('json/beverageQ.json',function(data){
 });
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Beverage sample Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bevMain.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="scripts/jquery-3.4.1.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div>
+<div class="row">
+  <div class="headerTop">
+    <div class="logoBand"> <img src="images/bio.png" ></div>
+  </div>
+  </div>
+  <div>
+    <div class="col-sm-3" style="background-color:#f2f2f2; padding:0px">
+      
+    <div class="sideMenu" >
+        <h3>BEVERAGE MENU</h3>
+      <!-- <ul>
+      	<li><a href="#">Sparkling Cranberry Punch</a></li>
+        <li><a href="#">Iced Chocolate Delight</a></li>
+        <li><a href="#">Raspberry Fizz</a></li>
+        <li><a href="#">Virgin Frozen Margarita</a></li>
+        <li><a href="#">Summer Punch</a></li>
+      </ul> -->
+  
+      </div>
+    </div>
+    <div class="col-sm-9">
+    <div class="Contentmain">
+    <div class="row">
+      <h3 class="beverMtext">Beverage Queue</h3>
+      <div class="col-sm-4">
+      <h2 class="textheading">IN THE QUEUE</h2>
+		<div class="queueBoxCol"></div>
+		<!--<div class="queueBox">
+            <h3>Sparkling Cranberry Punch</h3>
+            <span>JOE</span>
+     	</div>  
+        <div class="queueBox">
+            <h3>Raspberry Fizz</h3>
+            <span>STEPHEN</span>
+     	</div> 
+        <div class="queueBox">
+            <h3>Iced Chocolate Delight</h3>
+            <span>JULIA</span>
+     	</div>-->
+        
+      </div>
+      
+       <div class="col-sm-4">
+      	
+        <h2 class="textheading">BEING MIXED</h2>
+			<div class="beingMixBoxCol"></div>
+		<!--<div class="queueBox">
+            <h3>Virgin Frozen Margarita</h3>
+            <span>SHARON</span>
+     	</div>  -->
+        
+        
+        
+        
+      </div>
+       <div class="col-sm-4">
+        <h2 class="textheading">READY TO COLLECT</h2>
+        	<div class="readyBoxCol"></div>
+        <!--<div class="queueBox">
+            <h3>Sparkling Cranberry Punch</h3>
+            <span>PETER</span>
+     	</div> 
+        <div class="queueBox">
+            <h3>Sparkling Cranberry Punch</h3>
+            <span>LYDIA</span>
+     	</div> -->
+      </div>
+      
+      
+      
+      <div>
+      </div>
+    </div>
+    
+    
+  </div>
+</div>    
+</div>
+</div>
+ 
+<script>
+$(document).ready(function(){
+ 
+ $.getJSON('json/beverage_menu.json', function(data){
+	 $('.sideMenu').append('<ul id="BeverageMenu">');
+	 $.each(data[0].Beverages, function(key, value){
+		 	$('#BeverageMenu').append('<li><a href="#">'+value.Name+'</a></li>');
+		 });
+	 });
+
+
+$.getJSON('json/beverageQ.json',function(data){
+	$.each(data,function(key,value){
+		if(value.IsBeingMixed){
+			$('.beingMixBoxCol').append('<div class="queueBox"><h3>'+value.OrderedBeverage.Name+'</h3><h2 style="text-align:center">'+value.BeverageBarUserId+'</h2><span>'+value.BeverageBarUserFirstName+'</span></div>')
+			}else if(value.IsCollected){
+			$('.queueBoxCol').append('<div class="queueBox"><h3>'+value.OrderedBeverage.Name+'</h3><h2 style="text-align:center">'+value.BeverageBarUserId+'</h2><span>'+value.BeverageBarUserFirstName+'</span></div>')
+			}else if(value.IsReadyToCollect){
+				$('.readyBoxCol').append('<div class="queueBox"><h3>'+value.OrderedBeverage.Name+'</h3><h2 style="text-align:center">'+value.BeverageBarUserId+'</h2><span>'+value.BeverageBarUserFirstName+'</span></div>');
+				};
+		});
+	});
+
+
+
+
+
+
+
+
+
+//$.getJSON('json/beverage_menu.json', function(data) { 
+
+                                              
+    //  $('.sideMenu').append('<ul id="beverage_menu">');
+  
+     // $.each(data[0].Beverages, function(key, value) {
+
+      //    $('#beverage_menu').append('<li><a href="'+value.Name+'">'+value.Name+'</a></li>');
+
+      //}); 
+  //});
+  
+// Beverages JSON load
+//$.getJSON('json/beverageQ.json', function(data) { 
+
+                                               
+ // $.each(data, function(key, value) {
+     // if(value.IsBeingMixed){
+     // $('.queueBoxCol').append('<div class="queueBox"><h3>'+value.OrderedBeverage.Name+'</h3><span>'+value.BeverageBarUserFirstName+'</span></div>');
+      //}else if(value.IsReadyToCollect){
+         // $('.beingMixBoxCol').append('<div class="queueBox"><h3>'+value.OrderedBeverage.Name+'</h3><span>'+value.BeverageBarUserFirstName+'</span></div>'); 
+  //}else if(value.IsCollected){
+        //  $('.readyBoxCol').append('<div class="queueBox"><h3>'+value.OrderedBeverage.Name+'</h3><span>'+value.BeverageBarUserFirstName+'</span></div>');
+      //}
+     // }); 
+ 
+ // });
+  
+
+});
+</script>
+</body>
+>>>>>>> d8366d67b5387105b2e0b9b38a0d392d5dfd8042
 </html>
