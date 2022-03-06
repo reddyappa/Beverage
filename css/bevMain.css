@@ -1,0 +1,185 @@
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #333;
+	
+}
+
+a {
+	color: #2980b9;
+}
+
+.fullWidth {
+	width: 100%;
+	float: left;
+}
+
+.commonBg {
+	background-color: #2980b9;
+}
+
+.mainNavigation {
+	padding-right: 0;
+	/*overflow: hidden;*/
+	float: none;
+	width: 100%;
+	position: relative;
+	top: 0px;
+	width: 100%;
+}
+
+.heraderBg {
+	background-color: #329bcc;
+display: block;
+float: left;
+width: 100%;
+}
+
+.container {
+	max-width: 980px;
+}
+.fullwidth{
+	width:100%;
+}
+.headerTop{
+	background-color:#1e2330;
+	text-align:center;
+}
+.logoBand img{
+	width:90px;
+	padding:15px 0px;
+}
+.sideMenu {
+    min-height: 600px;
+	background-color:#f2f2f2;
+}
+.sideMenu h3{
+	background: #ffa403;
+color: #FFF;
+padding: .5em; margin-top: 0px;
+margin-bottom:0px;
+font-size: 21px;
+text-align:center;
+}
+.sideMenu ul{
+	list-style-type: none;
+margin: 0;
+padding: 0;
+}
+.sideMenu ul li{
+background: #feebb3;
+color: #000;
+padding-left: 20px;
+padding: .5em;
+}
+.sideMenu ul li:hover{
+	background:#ffcc32
+}
+.sideMenu ul li a{
+ color:#000;
+ text-decoration:none;
+}
+
+.Contentmain{
+	min-height: 600px;
+}
+.sideMenu h3{
+	text-transform:uppercase;
+}
+.queueBox{
+	border:1px solid #CCC;
+	width:100%;
+	display:block;
+	margin-bottom:20px;
+}
+.queueBox h3{
+	background-color: #ffa403;
+text-transform: uppercase;
+color: #FFF;
+margin: 0px;
+padding: 24px 5px;
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+display:block;
+}
+.queueBox span{
+	display: block;
+font-weight: bold;
+text-align: center;
+font-size: 16px;
+line-height: 48px;
+}
+.textheading{
+font-size: 18px;
+
+text-align: center;
+
+margin-bottom: 20px;
+
+color: #333;
+}
+.beverMtext{
+font-size: 21px;
+background: #f2f2f2;
+padding: 10px;
+text-align: center;
+margin-top:0px;
+}
+.backgroundBg{
+	background-image:url(../images/home_bg.jpg);
+	background-repeat:repeat;
+}
+.formWindow {
+   max-width: 300px;
+    padding: 15px;
+    margin: 90px auto;
+    text-align: center;
+    background:#ffffff;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.loginLogo {
+    float: none;
+    text-align: center;
+}
+.loginLogo span {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    text-align: center;
+	font-weight:bold;
+}
+label{
+	font-weight: normal !important;
+}
+.imgDiv{
+	width:110px;
+	margin:10px 0px;
+}
+.btnSubmit{
+	display: block;
+width: 100%;
+margin-top: 9px;
+font-size: 18px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+border-radius: 0px;
+border: 0px;
+background: #b1e319;
+color: #000;
+border: 1px solid #b1e319;
+text-shadow: none;
+margin-bottom: 3px;
+line-height:45px;
+}
+@media screen and (max-width:768px){
+.sideMenu{
+	min-height: auto;
+padding-left: 15px;
+padding-right: 14px;
+}
+}
